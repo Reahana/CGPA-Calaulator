@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CGPA Calculator</title>
+	<link rel="stylesheet" href="calStyle.css" />
+</head>
+
+<body>
+
+  <div class="template">
+  <h2>Calculate Your CGPA</h2>
+  <table>
+  	<tr>
+		<th> </th>
+  		<th> Credit </th>
+		<th>Grade</th>
+  	</tr>
+	 <!-- 1st -->
+	<tr>
+		<td>Subject1: </td>
+  		<td> <input id="myCredit1" type="text"> </td>
+		<td><input id="myInput1" type="text"></td>
+  	</tr>
+	 <!-- 2nd -->
+	<tr>
+		<td>Subject2: </td>
+		<td><input id="myCredit2" type="text"></td>
+		<td><input id="myInput2" type="text"></td>
+	</tr>
+	<!-- 3rd -->
+	<tr>
+		<td> Subject3:</td>
+		<td><input id="myCredit3" type="text"></td>
+		<td><input id="myInput3" type="text"></td>
+	</tr>
+	<!-- 4th-->
+	<tr>
+		<td>Subject4:</td>
+		<td><input id="myCredit4" type="text"></td>
+		<td><input id="myInput4" type="text"></td>
+	</tr>
+	<tr>
+		<th> Total Credit:</th>
+		<td><input id="totalCredit" type="text"></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+<td>
+		
+    <button onclick="grade()">Submit</button>
+		</td>
+	</tr>
+	<tr>
+		<th>CGPA:</th>
+		<td><p id="demo"></p></td>
+	</tr>
+  </table>
+  
+
+ </div>
+<script>
+ function grade() {
+var text;
+ var C1= document.getElementById("myCredit1").value;
+  var G = document.getElementById("myInput1").value;
+  
+   switch(G) {
+     case "A+":
+      text = 4.00;
+    break;
+   case "A":
+   text =3.75 ;
+    break;
+   case "A-":
+     text =3.50 ;
+    break;
+   case "B+":
+      text =3.25;
+  break;
+     case "B":
+    text = 3;
+     break;
+     case "B-":
+     text =2.75 ;
+    break;
+    case "C+":
+    text =2.50;
+  break;
+     case "C":
+    text = 2.25;
+    break;
+    case "D":
+     text =2.00 ;
+     break;
+    case "F":
+     text =0.00 ;
+     break;
+    default:
+     text = 0;
+    
+   }
+    var s1=text*C1;
+ 
+
+
+
+ var C2= document.getElementById("myCredit2").value;
+  var G = document.getElementById("myInput2").value;
+  
+   switch(G) {
+     case "A+":
+      text = 4.00;
+    break;
+   case "A":
+   text =3.75 ;
+    break;
+   case "A-":
+     text =3.50 ;
+    break;
+   case "B+":
+      text =3.25;
+  break;
+     case "B":
+    text = 3;
+     break;
+     case "B-":
+     text =2.75 ;
+    break;
+    case "C+":
+    text =2.50;
+  break;
+     case "C":
+    text = 2.25;
+    break;
+    case "D":
+     text =2.00 ;
+     break;
+	 case "F":
+     text =0.00 ;
+     break;
+    default:
+     text = 0;
+    
+   }
+    var s2=text*C2;
+ 
+
+
+ var C3= document.getElementById("myCredit3").value;
+  var G = document.getElementById("myInput3").value;
+  
+   switch(G) {
+     case "A+":
+      text = 4.00;
+    break;
+   case "A":
+   text =3.75 ;
+    break;
+   case "A-":
+     text =3.50 ;
+    break;
+   case "B+":
+      text =3.25;
+  break;
+     case "B":
+    text = 3;
+     break;
+     case "B-":
+     text =2.75 ;
+    break;
+    case "C+":
+    text =2.50;
+  break;
+     case "C":
+    text = 2.25;
+    break;
+    case "D":
+     text =2.00 ;
+     break;
+   case "F":
+     text =0.00 ;
+     break;
+    default:
+     text = 0;
+    
+   }
+     var s3=text*C3;
+
+
+
+
+ var C4= document.getElementById("myCredit4").value;
+  var G = document.getElementById("myInput4").value;
+  
+   switch(G) {
+     case "A+":
+      text = 4.00;
+    break;
+   case "A":
+   text =3.75 ;
+    break;
+   case "A-":
+     text =3.50 ;
+    break;
+   case "B+":
+      text =3.25;
+  break;
+     case "B":
+    text = 3;
+     break;
+     case "B-":
+     text =2.75 ;
+    break;
+    case "C+":
+    text =2.50;
+  break;
+     case "C":
+    text = 2.25;
+    break;
+    case "D":
+     text =2.00 ;
+     break;
+    case "F":
+     text =0.00 ;
+     break;
+    default:
+     text = 0;
+    
+   }
+     var s4=text*C4;
+
+	 
+	 //CGPA
+   var TR= document.getElementById("totalCredit").value;;
+  var result=(s1+s2+s3+s4)/TR;
+
+  document.getElementById("demo").innerHTML =result; 
+ }
+  
+ 
+</script>
+
+</body>
+</html>
